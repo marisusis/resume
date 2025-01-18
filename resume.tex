@@ -1,0 +1,342 @@
+\documentclass[notitlepage,10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, siunitx, enumitem, witharrows, smartunits, caption, mathtools, tikz, gensymb, pgfplotstable, booktabs, csvsimple, float, circuitikz, multirow, setspace, pgfplots, tikz-dimline, chemformula}
+\usepackage[most]{tcolorbox}	
+\usetikzlibrary{arrows,calc, 3d}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage[thinc]{esdiff}
+\usepackage[left=0.3in,right=0.3in,bottom=0.4in,top=0.3in]{geometry}
+\usepackage[T1]{fontenc}
+% \usepackage{Arvo}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{multicol}
+% \usepackage[usefilenames,RMstyle={Medium,Semibold},SSstyle={Medium,Semibold},TTstyle={Medium,Semibold},DefaultFeatures={Ligatures=Common}]{plex-otf} %
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\definecolor{linkb}{HTML}{6279B8}
+\definecolor{ca}{HTML}{c1121f}
+\definecolor{cb}{HTML}{003049}
+\definecolor{accent1}{HTML}{000000}
+% \definecolor{accent1}{HTML}{3777FF}
+% \definecolor{accent2}{HTML}{003bbb}
+\definecolor{accent2}{HTML}{000000}
+\definecolor{accent3}{HTML}{4e4e4e}
+
+\newcommand{\linka}[2]{
+   \textcolor{linkb}{\href{#1}{#2}}
+}
+
+\newenvironment{resumesection}[1]{
+    \header{#1}
+}{}
+
+\newcommand{\labela}[1]{
+    \small\textbf{\MakeUppercase{#1}}
+}
+
+% \newcommand{\header} [1] {
+%     {\hspace*{-18pt}\vspace*{6pt} \uppercase{ \textbf{#1}}}
+%     \vspace*{-6pt} \lineunder
+% }
+
+\newcommand{\header}[1]{
+    \vspace{2pt}
+    % \textcolor{accent1}{\LARGE \fontspec[RawFeature=+ssXX]{Tiny5-Regular.ttf}\textsc{#1}}
+    \textcolor{accent1}{\Large \textbf{#1}}
+    \vspace{6pt}\hrule\vspace{4pt}
+}
+
+\newcommand{\TECH}{
+    \textcolor{accent3}{\small\textbf{SKILLS}}\small\,
+}
+
+\newcommand{\emptyheader}{
+    \hrule\vspace{4pt}
+}
+
+\newcommand{\sepone}{
+    \vspace{-\baselineskip}
+    \vspace{8pt}
+}
+
+\newcommand{\thingsep}{
+    \vspace{4pt}
+}
+
+\newcommand{\LINK}[2]{
+    \href{#1}{\textbf{#2}\,\,{\small\faExternalLink}}
+}
+
+\usepackage{fontspec}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rfoot{\marginpar{\vspace*{-0.5cm}Made with \LaTeX}}
+
+
+\pagestyle{empty}
+\begin{document}
+
+\setmainfont{Rubik-Regular.ttf}[
+    BoldFont = Rubik-Medium.ttf,
+    ItalicFont = Rubik-Italic.ttf,
+]
+
+\setlength{\parindent}{0pt}
+
+% \textcolor{accent1}{\Huge \fontspec[RawFeature=+ssXX]{Tiny5-Regular.ttf}MARIS USIS} \hfill\linka{mailto:marisusis0@protonmail.com}{marisusis0@protonmail.com} $\cdot$ (216)-386-8071 $\cdot$ \linka{https://linkedin.com/in/marisusis}{marisusis\,\,\faLinkedinSquare} $\cdot$ \linka{https://github.com/marisusis}{marisusis\,\,\faGithub} \\
+\textcolor{accent1}{\huge \textbf{MARIS USIS}} \hfill\linka{mailto:marisusis0@protonmail.com}{marisusis0@protonmail.com} $\cdot$ (216)-386-8071 $\cdot$ \linka{https://linkedin.com/in/marisusis}{marisusis\,\,\faLinkedinSquare} $\cdot$ \linka{https://github.com/marisusis}{marisusis\,\,\faGithub}
+\thingsep \\
+\textit{Curious engineering graduate with a strong desire to learn, especially in the fields of machine learning and systems engineering.}
+\thingsep
+
+\begin{resumesection}{EDUCATION}
+    \textcolor{accent2}{\textbf{\large Case Western Reserve University}}\hfill Cleveland, OH\\
+    \textbf{BS} in Electrical Engineering, Computer Science \hfill 2020-2024\\
+    % \textbf{MS} in Electrical Engineering \quad\textit{\small Researching HF radio propagation} \hfill 2024-\\
+    \textbf{MS} in Electrical Engineering  \hfill 2024-\\
+    {\small Algorithms, Machine learning, Data structures, VLSI, Analog MOS IC design, Analog circuit design, Embedded systems, Wireless communication, Computer vision, Digital signal processing}
+    \thingsep
+% \textit{\small Research based. Using DSP techniques with machine learning to analyze data.}
+
+\end{resumesection}
+
+\begin{resumesection}{EXPERIENCE}
+
+    \textcolor{accent2}{\textbf{\large{CWRU Eclipse Research Group}}}\hfill\normalsize Cleveland, OH\\
+    \textit{Software Engineer / Electrical Engineer} \hfill {\small 2023-present}
+    % {\TECH Rust, C, C++, React, Google Cloud Platform, Python, Grafana, GraphQL, nginx, pandas, xarray, Docker, CI/CD}
+    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        % \item Designed a system for GPS-synchronized recording of Canadian time standard HF radio station CHU (3.33, 7.85, 14.67 MHz).
+        \item Designed and implemented a distributed data collection system for high-frequency radio measurements within a critical 90-day timeline
+        \item Developed high-performance data collection tools in Rust and C, enabling simultaneous processing of 20+ real-time data streams
+        \item Managed collection and storage of 2 TB of scientific data over two weeks using Google Cloud Platform
+        \item Led deployment of 18 radio receivers across 6 locations for the April 2024 solar eclipse, coordinating with volunteer operators
+        % \item Built Docker containers for fast cross-compilation of ARMv7/AArch64 binaries for the Raspberry Pi 4.
+    \end{itemize}}
+    \thingsep
+
+    \textcolor{accent2}{\textbf{\large{Contract work}}}\hfill\normalsize Denver, CO \\
+    \textit{Blockchain Software Engineer} \hfill {\small 2024}
+    % {\TECH Rust, Anchor, Solana, React}
+    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        \item Designed and implemented a full-stack solution for a single-sided staking protocol on the Solana blockchain using Rust, Anchor, and React; aided \$1.5M in liquidity
+    \end{itemize}}
+    \thingsep
+
+
+
+    \textcolor{accent2}{\textbf{\large{Caeser Creek Software}}}\hfill\normalsize Dayton, OH\\
+    \textit{Reverse Software \& Hardware Engineer Intern} \hfill\small Summer 2023 
+    % {\TECH C, C++, Linux, Rust, Ghidra, arm, x86, assembly}
+    \begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        % \item Performed vulnerability research on the Garmin Instinct 2 smart watch using Ghidra, GDB, and OpenOCD
+        % \item Found a buffer overflow exploit in the firmware update bytecode using Ghidra
+        \item Vulnerability research on Garmin Instinct 2 smartwatch ARM firmware using Ghidra, GDB, and OpenOCD hardware debugging
+        \item Built internal tools to aid in reverse engineering using Rust and C++
+        % \item Discovered exploitable buffer overflow in firmware update verification through static analysis and bytecode manipulation
+    \end{itemize}
+    \thingsep
+
+    \textcolor{accent2}{\textbf{\large{MRI Software}}}\hfill\normalsize Solon, OH\\
+    \textit{Product Development Intern} \hfill\small Summer 2022
+    % {\TECH Azure DevOps, Azure CosmosDB, MongoDB, C\#, Node.JS, Typescript, .NET 6.0, ASP.NET Core, Angular, NUnit, Jira, Azure, Git}
+    \begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        \item Built an automated testing suite for the Public and Affordable Housing software suite to offload work from QA engineers.    
+        \item Used Azure CI/CD to automate testing and deployment of the software suite to a webapp.
+    \end{itemize}
+    \thingsep
+
+
+\end{resumesection}
+
+
+\begin{resumesection}{PROJECTS}
+
+    % \raggedright
+    % \textcolor{accent2}{\textbf{\large SENTIENT}} -- Modular approach to AI tested using Minecraft. \hfill {2024-present} \\
+    % {\TECH {Java, Fabric, Python, PyTorch, Rust, Netty, TCP, UDP}} 
+    % % {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+    % %     \item Training a multi-model AI to play Minecraft by learning from human players' in-game actions.
+    % %     \item Using realtime data directly from the game to train/run the AI.
+    % % \end{itemize}}
+    % \thingsep
+
+    \raggedright
+    \textcolor{accent2}{\LINK{https://github.com/marisusis/telugu-to-english-with-transformers}{\large Telugu-English translation using the Transformer model architecture}} \hfill {2024} \\
+    % {\TECH {Python, PyTorch, NumPy, transformers}} 
+    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        \item Implemented transformer architecture from "Attention is All You Need" paper, built positional encoding and attention from scratch
+        \item Replicated results on 5M English-Telugu sentence pairs and fine-tuned for conversational language, achieving 27.2 BLEU score
+        % \item Built complete training pipeline with custom datasets, tokenization, and evaluation metrics
+    \end{itemize}}
+    \thingsep
+    \raggedright
+    \textcolor{accent2}{\LINK{https://github.com/marisusis/sdr-scraper}{\large Multithreaded data scraper for web-based software defined radios}} \hfill {2024} \\
+    % {\TECH {Rust, Tokio, WebSockets, Docker, CI/CD}} 
+    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        % \item Leveraged async Rust and multithreading to allow data collection from 50+ endpoints at once.
+        % \item Used a sender/consumer model to allow for extensibility and easy integration with other SDR systems
+        % \item Solved concurrent data collection bottleneck by implementing async Rust architecture, enabling simultaneous processing of 50+ SDR endpoints
+      \item Engineered async Rust system for parallel data collection from 50+ endpoints using thread pools and runtime optimization
+      \item Designed producer-consumer architecture with message passing for modular SDR integration and system scalability
+        % \item Addressed system integration challenges through modular sender/consumer architecture, facilitating seamless expansion to additional SDR platforms
+    \end{itemize}}
+    \thingsep
+    
+    % \raggedright
+    % \textcolor{accent2}{\textbf{\large XHDATA Radio modification}} -- Hacked a cheap Walmart XHDATA radio to disable the AGC \hfill {2024} \\
+    % {\TECH {OpenOCD, picoprobe, C, Ghidra, ARM, embedded systems, CMake}} 
+    % {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+    %     % \item Dumped the firmware from the internal HC37 microcontroller, used Ghidra and picoprobe debugger to reverse engineer firmware.
+    %     \item Reverse engineered armv7 radio firmware inusing Ghidra to disable automatic gain control (AGC).
+    %     \item Wrote a bytecode patch to disable the automatic gain control (AGC) without bricking the device.
+    %     \item Making an open source contribution to add HC37 NOR flash support to OpenOCD.
+    % \end{itemize}}
+    % \thingsep
+
+    \raggedright
+    \textcolor{accent2}{\textbf{\large HC37 NOR flash driver for OpenOCD}} \hfill {2024} \\
+    % {\TECH {OpenOCD, C, Ghidra, armv7, embedded systems, CMake, debugging}} 
+    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        % \item Dumped the firmware from the internal HC37 microcontroller, used Ghidra and picoprobe debugger to reverse engineer firmware.
+        % \item Reverse engineered armv7 radio firmware inusing Ghidra to disable automatic gain control (AGC).
+        % \item Wrote a bytecode patch to disable the automatic gain control (AGC) without bricking the device.
+        % \item Making an open source contribution to add HC37 NOR flash support to OpenOCD.
+        \item Reverse engineered protocol for HC37 NOR flash memory on a cheap HF radio using OpenOCD and Ghidra, enabling firmware extraction and modification
+    \end{itemize}}
+    \thingsep
+
+    
+
+    \raggedright
+    \textcolor{accent2}{\textbf{\large Embedded IMU sensor fusion}} \hfill {2023} \\
+    % {\TECH {Schematic capture, PCB layout, Rust, C, OpenOCD, I2C}} 
+    % {\small { \textbf{LINKS} } {
+    %     \linka{https://marisusis.me/senior_project_schematic_v1.pdf}{Schematic} |
+    %     \linka{https://code.marisusis.me/marisusis/redstone}{Firmware (git)}
+    % }}
+    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        % \item Drafted schematic, preformed PCB layout, and hand-soldered SMD components to said PCB.
+        % \item Implemented a Kalman filter in Rust for a STM32F4xx series MCU.
+        \item Implemented real-time sensor fusion using Kalman filtering algorithms on STM32F4 microcontroller in Rust, achieving robust state estimation in resource-constrained embedded environment
+        \item Designed schematic and custom 4-layer PCB using KiCad
+    \end{itemize}}
+    \thingsep
+
+    % \raggedright
+    % \textcolor{accent2}{\textbf{\large Redstone}} \hfill {2023-present} \\
+    % {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+    %     \item Ubuntu server utilizing GPU virtualization for machine learning tasks
+    %     % \item Abandoned expansion beyond ASIO because all 5 audio APIs on Windows suck
+    % \end{itemize}}
+    % \thingsep
+
+    \raggedright
+    \textcolor{accent2}{\LINK{https://github.com/marisusis/route-suite}{\large Graph-based audio routing software for ASIO on Windows}} \hfill {2021-2023} \\
+    % {\TECH {C++, CMake, ASIO, audio processing}} 
+    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        \item Achieved low-latency (< 7ms) audio routing between ASIO clients (e.g. Ableton, Reaper)
+        % \item Abandoned expansion beyond ASIO because all 5 audio APIs on Windows suck
+    \end{itemize}}
+    \thingsep
+
+    \raggedright
+    \textcolor{accent2}{\LINK{https://github.com/marisusis/redstone}{\large Modular Minecraft server framework with robust database integration}}  \hfill {2018-2020} \\
+    % {\TECH {Java, MongoDB, Redis, Maven, Netty}} 
+    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        \item Built comprehensive server framework in Java to allow easy plugin development and server management
+        \item Used MongoDB and Redis in concert to facilitate quick and reliable data access across server nodes, committing data periodically and when no longer in use.
+
+
+    \end{itemize}}
+    \thingsep
+
+\end{resumesection}
+
+\begin{resumesection}{PRESENTATIONS \& PUBLICATIONS}
+    \textcolor{accent2}{\textbf{\large AGU24}}\hfill Washington, DC\\
+     \begin{minipage}[t]{.8\textwidth}
+        \raggedright
+        \textit{\small HF Propagation Experiment Utilizing CHU Beacon During the April 2024 Solar Eclipse: A Collaborative Approach to Ionospheric Research} \\
+    \end{minipage}% <---------------- Note the use of "%"
+    \begin{minipage}[t]{.2\textwidth}
+        \raggedleft
+        \hfill {\small December, 2024} \\
+    \end{minipage}
+    \thingsep
+
+    % \textcolor{accent2}{\textbf{\large HamSCI 2024}}\hfill Cleveland, OH\\
+    % \begin{minipage}[t]{.8\textwidth}
+    %     \raggedright
+    %     \textit{\small Ions and Beacons and Flares: Examining HF Propagation Along the 8 April 2024 Total Solar Eclipse Path} \\
+    % \end{minipage}% <---------------- Note the use of "%"
+    % \begin{minipage}[t]{.2\textwidth}
+    %     \raggedleft
+    %     \hfill {\small March, 2024} \\
+    % \end{minipage}
+\end{resumesection}
+
+\begin{resumesection}{SKILLS, etc.}
+    \labela{Languages} Rust, Python, C, C++, ARM, x86, Java, JavaScript, TypeScript, C\#, Verilog
+
+    \labela{Technologies \& Frameworks} PyTorch, React, Angular, Node.js, Docker, Git, MongoDB, Redis, ASP.NET Core
+
+    \labela{Tools} Ghidra, OpenOCD, GDB, CMake, Buildroot
+
+    \labela{Platforms} Azure, Google Cloud Platform, AWS CDK, Ubuntu Linux, RHEL
+
+    \labela{Protocols} I2C, SPI, TCP/IP, UDP, WebSockets
+
+    % \labela{Domain Knowledge} Machine Learning/NLP, Embedded Systems, System Architecture, Audio Processing, PCB Design, Reverse Engineering
+\end{resumesection}
+% \thingsep
+
+% \begin{resumesection}{LEADERSHIP}
+%     \textcolor{accent2}{\textbf{\large{University Programming Board}}}\hfill\normalsize Cleveland, OH \\
+%     \begin{minipage}[t]{.8\textwidth}
+%         \raggedright
+%         Director of Concerts
+%     \end{minipage}% <---------------- Note the use of "%"
+%     \begin{minipage}[t]{.2\textwidth}
+%         \raggedleft
+%         \hfill {2023-2024} \\
+%     \end{minipage}
+%     \thingsep
+% \end{resumesection}
+
+
+% \emptyheader
+
+% \raggedright
+%     \labela{Skills} Rust, armv7, aarch64, x86, Java, C, C++, Javascript, Typescript, HTML, CSS/SASS/SCSS, Ghidra, gdb,
+%     Python, \LaTeX, MATLAB, Swift, R, cross-compiling, LTSpice, KiCad, PID controllers, Cadence Virtuoso, Siemens Tanner EDA
+
+    % \labela{Libraries} xarray, pandas, numpy, React, Angular, Next.JS
+
+    % \vspace{3pt}
+    % \labela{Libraries} numpy, pandas, Node.JS, express.js,
+    % socket.io, matplotlib, tikz/pgfplots, React,
+    % boost, jQuery, Electron, .NET 6.0, ASP.NET Core, NUnit, Bootstrap, Angular
+
+    % \vspace{3pt}
+    % \labela{Software} Linux, 
+    % % After Effects, Premiere Pro, Photoshop,
+    % IntelliJ, Ableton, Reaper, Mathematica, Cubase 13,
+    % % Maple,
+    %  MATLAB,
+    % CMake, git, AutoCAD,
+    % % Blender, 
+    % Visual Studio, Ghidra, Unity, Unreal Engine
+
+
+
+\vspace*{\fill}
+% \hfill\textit{Made by me using \LaTeX. Fonts: Rubik, Tiny5.}
+
+\end{document}
