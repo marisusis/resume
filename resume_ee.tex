@@ -113,7 +113,7 @@
     % {\TECH Rust, C, C++, React, Google Cloud Platform, Python, Grafana, GraphQL, nginx, pandas, xarray, Docker, CI/CD}
     {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
         % \item Designed a system for GPS-synchronized recording of Canadian time standard HF radio station CHU (3.33, 7.85, 14.67 MHz).
-        \item Designed and implemented a distributed data collection system for high-frequency radio measurements within a critical 90-day timeline
+        \item Designed a distributed data collection system for high-frequency radio measurements within a critical 90-day timeline
         \item Developed high-uptime data collection tools in Rust and C, enabling simultaneous processing of 20+ real-time data streams
         \item Managed collection and storage of 2 TB of scientific data over two weeks using Google Cloud Platform
         \item Led deployment of 18 radio receivers across 6 locations for the April 2024 solar eclipse, coordinating with volunteer operators
@@ -121,13 +121,13 @@
     \end{itemize}}
     \thingsep
 
-    \textcolor{accent2}{\textbf{\large{Contract work}}}\hfill\normalsize Denver, CO \\
-    \textit{Blockchain Software Engineer} \hfill {\small June 2024}
-    % {\TECH Rust, Anchor, Solana, React}
-    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
-        \item Designed and implemented a full-stack solution for a single-sided staking protocol on the Solana blockchain using Rust, Anchor, and React; aided \$1.5M in liquidity
-    \end{itemize}}
-    \thingsep
+    % \textcolor{accent2}{\textbf{\large{Contract work}}}\hfill\normalsize Denver, CO \\
+    % \textit{Blockchain Software Engineer} \hfill {\small June 2024}
+    % % {\TECH Rust, Anchor, Solana, React}
+    % {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+    %     \item Designed and implemented a full-stack solution for a single-sided staking protocol on the Solana blockchain using Rust, Anchor, and React; aided \$1.5M in liquidity
+    % \end{itemize}}
+    % \thingsep
 
 
 
@@ -168,26 +168,61 @@
     % \thingsep
 
     \raggedright
-    \textcolor{accent2}{\LINK{https://github.com/marisusis/telugu-to-english-with-transformers}{\large Telugu-English translation using the Transformer model architecture}} \hfill {2024} \\
-    % {\TECH {Python, PyTorch, NumPy, transformers}} 
+    \textcolor{accent2}{\textbf{\large 65nm MOSFET operational amplifier design}} \hfill {2024} \
     {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
-        \item Implemented transformer architecture from "Attention is All You Need" paper, built positional encoding and attention from scratch
-        \item Replicated results on 5M English-Telugu sentence pairs and fine-tuned for conversational language, achieving 27.2 BLEU score
-        % \item Built complete training pipeline with custom datasets, tokenization, and evaluation metrics
+        \item Designed a two-stage operational amplifier using Cadence Virtuoso
+        \item Achieved 66.1 dB gain and 23.04 MHz unity gain frequency in 65nm CMOS two-stage opamp
+        % \item Optimized Miller compensation for 44.41° phase margin and stable operation
+        % \item Delivered 90.22ns/101.60ns rising/falling settling times for ±0.3V steps
+        % \item Maintained 91.72 µA current draw with 0.230V-2.178V output swing
+        \item Built DC, AC, and transient test benches for full performance validation
     \end{itemize}}
     \thingsep
+
     \raggedright
-    \textcolor{accent2}{\LINK{https://github.com/marisusis/sdr-scraper}{\large Multithreaded data scraper for web-based software defined radios}} \hfill {2024} \\
-    % {\TECH {Rust, Tokio, WebSockets, Docker, CI/CD}} 
+    \textcolor{accent2}{\textbf{\large Switched-mode power supply design}} \hfill {2023} \\
     {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
-        % \item Leveraged async Rust and multithreading to allow data collection from 50+ endpoints at once.
-        % \item Used a sender/consumer model to allow for extensibility and easy integration with other SDR systems
-        % \item Solved concurrent data collection bottleneck by implementing async Rust architecture, enabling simultaneous processing of 50+ SDR endpoints
-      \item Engineered async Rust system for parallel data collection from 50+ endpoints using thread pools and runtime optimization
-      \item Designed producer-consumer architecture with message passing for modular SDR integration and system scalability
-        % \item Addressed system integration challenges through modular sender/consumer architecture, facilitating seamless expansion to additional SDR platforms
+        \item Designed buck converter with 83.3\% efficiency and 5-15V/0.3A output capability
+        \item Achieved <1\% line/load regulation through closed-loop control
+        \item Built 0.4A current-limiting protection circuit for short-circuit safety
+        % \item Maintained stable 25-30 kHz operation across 16-28V input range
     \end{itemize}}
     \thingsep
+
+    \raggedright
+    \textcolor{accent2}{\textbf{\large Analog PWM motor control circuit}} \hfill {2023} \\
+    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+        \item Built PWM motor controller with 1.89\% load regulation and 1.71\% line regulation with variable 30-6000 RPM range
+        \item Created 15kHz PWM generator and MOSFET power stage handling 6A load current
+        \item Implemented IR LED encoder with 60-tooth disk enabling speed control down to 30 RPM
+        % \item Implemented sample-and-hold circuitry achieving 43ms step response time
+        % \item Built frequency-to-voltage converter operating across 
+    \end{itemize}}
+    \thingsep
+
+    % \raggedright
+    % \textcolor{accent2}{\LINK{https://github.com/marisusis/telugu-to-english-with-transformers}{\large Telugu-English translation using the Transformer model architecture}} \hfill {2024} \\
+    % % {\TECH {Python, PyTorch, NumPy, transformers}} 
+    % % {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+    % %     \item Implemented transformer architecture from "Attention is All You Need" paper, built positional encoding and attention from scratch
+    % %     \item Replicated results on 5M English-Telugu sentence pairs and fine-tuned for conversational language, achieving 27.2 BLEU score
+    % %     % \item Built complete training pipeline with custom datasets, tokenization, and evaluation metrics
+    % % \end{itemize}}
+    % \thingsep
+    % \thingsep
+    
+    % \raggedright
+    % \textcolor{accent2}{\LINK{https://github.com/marisusis/sdr-scraper}{\large Multithreaded data scraper for web-based software defined radios}} \hfill {2024} \\
+    % % {\TECH {Rust, Tokio, WebSockets, Docker, CI/CD}} 
+    % {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+    %     % \item Leveraged async Rust and multithreading to allow data collection from 50+ endpoints at once.
+    %     % \item Used a sender/consumer model to allow for extensibility and easy integration with other SDR systems
+    %     % \item Solved concurrent data collection bottleneck by implementing async Rust architecture, enabling simultaneous processing of 50+ SDR endpoints
+    %   \item Engineered async Rust system for parallel data collection from 50+ endpoints using thread pools and runtime optimization
+    %   \item Designed producer-consumer architecture with message passing for modular SDR integration and system scalability
+    %     % \item Addressed system integration challenges through modular sender/consumer architecture, facilitating seamless expansion to additional SDR platforms
+    % \end{itemize}}
+    % \thingsep
     
     % \raggedright
     % \textcolor{accent2}{\textbf{\large XHDATA Radio modification}} -- Hacked a cheap Walmart XHDATA radio to disable the AGC \hfill {2024} \\
@@ -224,7 +259,7 @@
     {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
         % \item Drafted schematic, preformed PCB layout, and hand-soldered SMD components to said PCB.
         % \item Implemented a Kalman filter in Rust for a STM32F4xx series MCU.
-        \item Implemented real-time sensor fusion using Kalman filtering algorithms on STM32F4 microcontroller in Rust, achieving robust state estimation in resource-constrained embedded environment
+        \item Implemented real-time sensor fusion using Kalman filtering algorithms on STM32F4 microcontroller in Rust
         \item Designed schematic and custom 4-layer PCB using KiCad
     \end{itemize}}
     \thingsep
@@ -246,16 +281,16 @@
     \end{itemize}}
     \thingsep
 
-    \raggedright
-    \textcolor{accent2}{\LINK{https://github.com/marisusis/redstone}{\large Modular Minecraft server framework with robust database integration}}  \hfill {2018-2020} \\
-    % {\TECH {Java, MongoDB, Redis, Maven, Netty}} 
-    {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
-        \item Built comprehensive server framework in Java to allow easy plugin development and server management
-        \item Used MongoDB and Redis in concert to facilitate quick and reliable data access across server nodes, committing data periodically and when no longer in use.
+    % \raggedright
+    % \textcolor{accent2}{\LINK{https://github.com/marisusis/redstone}{\large Modular Minecraft server framework with robust database integration}}  \hfill {2018-2020} \\
+    % % {\TECH {Java, MongoDB, Redis, Maven, Netty}} 
+    % {\small\begin{itemize}[noitemsep, font=\small, label={-}, leftmargin=*, topsep=0pt, partopsep=0pt]
+    %     \item Built comprehensive server framework in Java to allow easy plugin development and server management
+    %     \item Used MongoDB and Redis in concert to facilitate quick and reliable data access across server nodes, committing data periodically and when no longer in use.
 
 
-    \end{itemize}}
-    \thingsep
+    % \end{itemize}}
+    % \thingsep
 
 \end{resumesection}
 
